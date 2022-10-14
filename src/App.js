@@ -58,7 +58,11 @@ function App() {
         </div>
       </form>
 
-      { canShowNumber && <div>Vende a <b>{formatNumber(buyNowPrice)}</b>. Obtendrás un beneficio de <b>{formatNumber(getMargin())}</b> por carta</div> || <div> KK </div>
+      { (canShowNumber && 
+        <div>
+          Vende a <b>{formatNumber(buyNowPrice)}</b>. Obtendrás un beneficio de <b>{formatNumber(getMargin())}</b> por carta
+        </div>) ||
+        <div> Para obtener beneficios te recomendamos hacer tus flips con cartas de al menos <b>10,000</b> monedas </div>
       }
     </div>
   );
